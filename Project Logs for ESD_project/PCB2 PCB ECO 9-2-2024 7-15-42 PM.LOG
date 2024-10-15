@@ -1,0 +1,63 @@
+Added Component: Designator=U?(STM-TSSOP20_L)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Manufacturer URL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.st.com/web/en/home.html"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00088500.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink3Description"; Value = "Package Specification"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink3URL"; Value = "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00065136.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Core"; Value = "ARM Cortex-M0"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DatasheetVersion"; Value = "Rev. 1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "FLASH Size (Prog) (kB)"; Value = "16"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "I/Os (High Current)"; Value = "15"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Internal RAM Size (kB)"; Value = "4"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Technology"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Frequency(F) (Processor speed) (MHz)"; Value = "48"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageDescription"; Value = "20-Pin Thin Shrink Small Outline Package, 6.5 x 4.4 mm Body, 0.65 mm Pitch"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "TSSOP20"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageVersion"; Value = "Rev. 1, 11/2012"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packing"; Value = "Tube"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "STM32F030F4P6"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supply Voltage(Vcc) min (V)"; Value = "2.4"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=U?-1
+Added Pin To Net: NetName=GND Pin=U?-15
+Added Net: Name=GND
+Added Pin To Net: NetName=KP_C1 Pin=U?-17
+Added Net: Name=KP_C1
+Added Pin To Net: NetName=KP_C2 Pin=U?-18
+Added Net: Name=KP_C2
+Added Pin To Net: NetName=KP_R0 Pin=U?-12
+Added Net: Name=KP_R0
+Added Pin To Net: NetName=KP_R1 Pin=U?-13
+Added Net: Name=KP_R1
+Added Pin To Net: NetName=KP_R2 Pin=U?-14
+Added Net: Name=KP_R2
+Added Pin To Net: NetName=LCD_D4 Pin=U?-6
+Added Net: Name=LCD_D4
+Added Pin To Net: NetName=LCD_D5 Pin=U?-7
+Added Net: Name=LCD_D5
+Added Pin To Net: NetName=LCD_D6 Pin=U?-8
+Added Net: Name=LCD_D6
+Added Pin To Net: NetName=LCD_D7 Pin=U?-9
+Added Net: Name=LCD_D7
+Added Pin To Net: NetName=LCD_E Pin=U?-11
+Added Net: Name=LCD_E
+Added Pin To Net: NetName=LCD_RS Pin=U?-10
+Added Net: Name=LCD_RS
+Added Pin To Net: NetName=NRST Pin=U?-4
+Added Net: Name=NRST
+Added Pin To Net: NetName=OSCIN Pin=U?-2
+Added Net: Name=OSCIN
+Added Pin To Net: NetName=OSCOUT Pin=U?-3
+Added Net: Name=OSCOUT
+Added Pin To Net: NetName=SWCLK Pin=U?-20
+Added Net: Name=SWCLK
+Added Pin To Net: NetName=SWDIO Pin=U?-19
+Added Net: Name=SWDIO
+Added Pin To Net: NetName=VCC Pin=U?-16
+Added Net: Name=VCC
+Added Pin To Net: NetName=VDDA Pin=U?-5
+Added Net: Name=VDDA
+Added Class: Name=Sheet2
+Added Rule: Name=Schematic Supply Nets
+Added Rule: Name=Schematic Supply Nets_1
+Added Rule: Name=Schematic Supply Nets_2
