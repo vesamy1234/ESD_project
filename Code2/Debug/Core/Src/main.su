@@ -1,0 +1,8 @@
+../Core/Src/main.c:145:6:SystemClock_Config	80	static,ignoring_inline_asm
+../Core/Src/main.c:229:6:selectRow	8	static
+../Core/Src/main.c:274:9:Keypad_Getkey	16	static
+../Core/Src/main.c:295:6:Press	32	static
+../Core/Src/main.c:376:6:Release	24	static
+../Core/Src/main.c:408:6:Keypad_handle	16	static
+../Core/Src/main.c:96:5:main	48	static
+../Core/Src/main.c:423:6:Error_Handler	0	static,ignoring_inline_asm
