@@ -73,7 +73,7 @@ uint8_t key_last=0;
 float kq=0;
 int64_t num1=0;
 uint8_t row=0;
-
+uint8_t check=0;
 
 const uint8_t key_code [8][2] =
 {
@@ -339,13 +339,20 @@ void Press (uint8_t key)
 			}
 			else if (equaltion[i] == 4)
 			{
-				num[i+1] = num[i] / num[i+1];
-				num[i] = 0;
-				if (i>0)
+				if (num[i+1]==0)
 				{
-					equaltion[i] = equaltion[i-1];
+					check=1;
 				}
-				else equaltion[i] = 1;
+				else
+				{
+					num[i+1] = num[i] / num[i+1];
+					num[i] = 0;
+					if (i>0)
+					{
+						equaltion[i] = equaltion[i-1];
+					}
+					else equaltion[i] = 1;
+				}
 			}
 		}
 		for(uint8_t i = 0; i < 10; i++)
@@ -365,12 +372,14 @@ void Press (uint8_t key)
 
 		}
 		LCD_Location(1, 0);
-		LCD_Write_Float(kq);
+		if (check==1) LCD_Write_String("ERROR");
+		else LCD_Write_Float(kq);
 	}
 	if (key==DEL)
 	{
 		LCD_Clear();
 		LCD_Location(0, 0);
+		check=0;
 	}
 }
 void Release (uint8_t key)
