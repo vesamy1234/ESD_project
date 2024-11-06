@@ -60,55 +60,68 @@ void LCD_Write_Float(float number)                 // ghi chu so thap phan
 	floatToStr(number,buffer,3);
 	LCD_Write_String(buffer);
 }
-void floatToStr(float num, char *str, int8_t precision) {
-    int intPart = (int)num;  // L?y ph?n nguyên
-    float decimalPart = num - (float)intPart;  // L?y ph?n th?p phân
-    int i = 0;
+void floatToStr(float num, char *str, int8_t precision)
+{
+    int32_t intPart = (int32_t)num;  // Lay phan nguyen
+    float decimalPart = num - (float)intPart;  // Lay phan thap phân
+    int8_t i = 0;
 
-    // X? lý ph?n nguyên
-    if (intPart == 0) {
+    // Xu ly phan nguyen
+    if (intPart == 0)
+    {
         str[i++] = '0';
-    } else {
-        if (intPart < 0) {
+    }
+    else
+    {
+        if (intPart < 0)
+        {
             str[i++] = '-';
             intPart = -intPart;
-            decimalPart = -decimalPart;  // C?p nh?t ph?n th?p phân theo d?u
+            decimalPart = -decimalPart;  // Cap nhat phan thap phân theo dau
         }
 
-        // Chuy?n t?ng ch? s? c?a ph?n nguyên sang chu?i
-        int tempInt = intPart;
-        int len = 0;
-        while (tempInt > 0) {
+        // Chuyen tung chu so cua phan nguyen sang chuoi
+        int32_t tempInt = intPart;
+        int8_t len = 0;
+        while (tempInt > 0)
+        {
             len++;
             tempInt /= 10;
         }
 
-        for (int j = len - 1; j >= 0; j--) {
+        for (int8_t j = len - 1; j >= 0; j--)
+        {
             str[j + i] = (intPart % 10) + '0';
             intPart /= 10;
         }
         i += len;
     }
-
-    // Thêm d?u ch?m th?p phân
+    if (decimalPart == 0)
+    {
+    	str[i] = '\0';
+    	return;
+    }
+    // Them dau cham thap phân
     str[i++] = '.';
 
-    // Tính luy th?a c?a 10 th? công d? thay cho pow(10, precision)
-    int factor = 1;
-    for (int j = 0; j < precision; j++) {
+    // Tính luy thua cua 10 thay cho pow(10, precision)
+    int16_t factor = 1;
+    for (int8_t j = 0; j < precision; j++)
+    {
         factor *= 10;
     }
 
-    // X? lý ph?n th?p phân
-    int decPartInt = (int)(decimalPart * factor);  // Chuy?n ph?n th?p phân thành s? nguyên v?i d? chính xác
+    // Xu ly phan thap phan
+    int16_t decPartInt = (int16_t)(decimalPart * factor);  // Chuyen phan thap phan thanh so nguyen voi do chinh xac
 
-    // Chuy?n ph?n th?p phân thành chu?i
-    for (int j = precision - 1; j >= 0; j--) {
+    // Chuyen phan thap phan thanh chuoi
+    for (int8_t j = precision - 1; j >= 0; j--)
+    {
         str[i + j] = (decPartInt % 10) + '0';
         decPartInt /= 10;
     }
 
-    // K?t thúc chu?i
+    // Ket thuc chuoi
     i += precision;
     str[i] = '\0';
 }
